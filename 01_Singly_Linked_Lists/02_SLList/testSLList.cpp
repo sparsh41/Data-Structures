@@ -65,6 +65,13 @@ int main(){
     list_4.push_front("hello");
 
     list_4.print_list();
+
+    list_4.insert(2, "insert");
+
+    list_4.print_list();
     
+    list_4.erase(2);
+    
+    list_4.print_list();
     return 0;
 }

@@ -153,3 +153,55 @@ void SLList<T>::clear() {
 
     list_size = 0;
 }
+
+template <typename T>
+void SLList<T>::insert(int position, const T& val) {
+    if (position >= list_size) {
+        return;
+    }
+
+    if (position == 0) {
+        push_front(val);
+        return;
+    }
+
+    if (position == list_size - 1) {
+        push_back(val);
+        return;
+    }
+
+    SLLNode<T>* cur = head;
+    for (int i = 1; i < position; i++) {
+        cur = cur->next;
+    }
+    cur->next = new SLLNode(val, cur->next);
+    list_size++;
+}
+
+template <typename T>
+void SLList<T>::erase(int position) {
+    if (position >= list_size) {
+        return;
+    }
+
+    if (position == 0) {
+        pop_front();
+        return;
+    }
+
+    if (position == list_size - 1) {
+        pop_back();
+        return;
+    }
+
+    SLLNode<T>* cur = head;
+    SLLNode<T>* prev = nullptr;
+    for (int i = 0; i < position; i++) {
+        prev = cur;
+        cur = cur->next;
+    }
+
+    prev->next = cur->next;
+    delete cur;
+    list_size--;
+}

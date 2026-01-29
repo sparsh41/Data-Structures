@@ -27,11 +27,13 @@ class SLList {
         // Insert Elements
         void        push_front(const T& val); // Inserts new node at the start of the list
         void        push_back(const T& val); // Insert new node at the end of list
+        void        insert(int position, const T& val); // Inset the value at the indicated positon
         
         // Remove Elements
         void        pop_front(); // Remove the first element of the list
         void        pop_back(); // Remove the last element
         void        clear(); // Clears the list
+        void        erase(int position); // Remove the value at the indicated position
         
         // Print List
         void        print_list() const; // Prints the List
