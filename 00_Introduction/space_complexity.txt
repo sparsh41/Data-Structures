@@ -1,0 +1,18 @@
+O notation - the slowest the algorithm can run
+Omega notation - the fastest the algorithm can run
+
+Space complexity: The amount of memory an algorithm requires realtive to the size of the input
+    Fixed space: O(1)
+    Variable space: Grows with input
+
+    Steps to analyze:
+        Identify all data structures
+        Calculate their sizes in terms of n
+        Take the sum
+
+    For arrays and vectors, the space complexity is linear, or O(n)
+    Matrices have space complexity O(n^2)
+
+    Linked lists - A collection of independent memory nodes that share a link
+        Linked by address of the next element, which is stored in the current
+        Null address value represents the end of the list
