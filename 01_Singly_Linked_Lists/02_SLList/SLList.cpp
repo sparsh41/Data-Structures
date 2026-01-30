@@ -150,8 +150,6 @@ void SLList<T>::clear() {
     while (!empty()) {
         pop_front();
     }
-
-    list_size = 0;
 }
 
 template <typename T>
