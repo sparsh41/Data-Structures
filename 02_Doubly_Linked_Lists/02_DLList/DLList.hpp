@@ -24,6 +24,7 @@ class DLList {
         // Properties
         unsigned    size() const; // Returns size of list
         bool        empty() const; // Returns true if list is empty, false if not
+        const T&    front() const; // Returns the first element in the list
         
         
         // Insert Elements
@@ -42,6 +43,7 @@ class DLList {
         void        print_reverse() const; // Prints the list backwards
         
 
+    private:
         DLLNode<T>* head; // Address of first node
         DLLNode<T>* tail; // Address of last node
         unsigned list_size;

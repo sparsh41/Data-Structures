@@ -1,5 +1,6 @@
 #include "DLList.hpp"
 #include <iostream>
+#include <stdexcept>
 
 // Constructors and stuff
 template <typename T>
@@ -57,6 +58,15 @@ unsigned DLList<T>::size() const {
 template <typename T>
 bool DLList<T>::empty() const {
     return (size() == 0);
+}
+
+template <typename T>
+const T& DLList<T>::front() const {
+    if (empty()) {
+        throw std::out_of_range("Empty Queue");
+    }
+
+    return head->next->data;
 }
 
 
