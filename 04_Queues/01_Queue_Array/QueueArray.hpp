@@ -1,30 +1,29 @@
+#ifndef QUEUEARRAY_H
+#define QUEUEARRAY_H
 
-#ifndef QUEUEDLL_H
-#define QUEUEDLL_H
-
-#include "../../02_Doubly_Linked_Lists/02_DLList/DLList.hpp"
-#include "../../02_Doubly_Linked_Lists/02_DLList/DLList.cpp"
-
-template <typename T>
-class QueueDLL {
+template <typename T, int size = 100>
+class QueueArray {
 
     public:
-        QueueDLL();
+        QueueArray();
 
+        int         length() const; // Returns the length
         bool        empty() const; 
         bool        full() const;
-        int         size() const;
 
         void        enqueue(const T& val); // Add element to the end of the queue
         const T&    front() const; // Return the first element in the queue
-        T           dequeue(); // Remove the first element and return it
+        const T&    dequeue(); // Remove the first element and return it
         void        clear(); // Clear the queue
 
         void        print() const; // Print the contents of the queue
 
     private:
-        DLList<T> data;
-        
+        T data[size]; // An array of 100 elemets
+        int queue_size;
+        int front_idx;
+        int back_idx;
+
 };
 
 #endif

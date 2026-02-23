@@ -1,6 +1,8 @@
 #include "QueueDLL.hpp"
 #include "QueueDLL.cpp"
 
+#include <stdexcept>
+
 int main() {
 
     QueueDLL<int> q;
@@ -18,6 +20,14 @@ int main() {
     q.clear();
 
     q.print();
+
+    try {
+        q.dequeue();
+    }
+
+    catch (std::out_of_range& ex) {
+        std::cout << ex.what() << std::endl;
+    }
 
     return 0;
 }
