@@ -1,0 +1,12 @@
+Origin_airport,Destination_airport,Origin_city,Destination_city,Distance,Cost
+ATL,DFW,"Atlanta, GA","Dallas, TX",732,130
+ATL,EWR,"Atlanta, GA","Newark, NJ",745,246
+ATL,MDW,"Atlanta, GA","Chicago, IL",590,231
+BWI,TPA,"Baltimore, MD","Tampa, FL",842,215
+MDW,UIN,"Chicago, IL","Quincy, IL",221,351
+EWR,ATL,"Newark, NJ","Atlanta, GA",745,83
+TPA,ATL,"Tampa, FL","Atlanta, GA",406,374
+TPA,BOS,"Tampa, FL","Boston, MA",1185,264
+EWR,BOS,"Newark, NJ","Boston, MA",200,173
+LAS,DFW,"Las Vegas, NV","Dallas, TX",1055,342
+LAS,TPA,"Las Vegas, NV","Tampa, FL",1984,244

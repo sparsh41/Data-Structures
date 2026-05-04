@@ -21,3 +21,15 @@ Topic List:
 
     Heaps:
         Operations with Min Heaps
+
+    Graphs:
+        Operations with unweighted graphs
+        Operations with weighted graphs
+        Using weighted and directional graphs to simulate Airport Connections
+
+    Hash Tables:
+        Hard-coding a hash table
+        Operations with unordered maps (hash table)
+    
+    Sorting Algorithms:
+        Comparing time in different sorting algorithms
